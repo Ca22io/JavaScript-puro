@@ -1,0 +1,35 @@
+<!-- Melhor forma de trabalhar com orientção a objetos -->
+<html>
+    <body>
+        <script>
+            class Animal{
+                // Metodo utilizado para receber paramentro no class
+                constructor(nome){
+                    this.nome = 'cachorro';
+                }
+
+                // Função ou Metodo
+                printNome(){
+                    return this.nome
+                }
+            }
+
+
+            // extends faz a class cachorro erdar tudo da class Animal
+            class Cachorro extends Animal{
+                constructor(nome){
+                    // super invoca o constructor da classe pai
+                    // no caso Animal
+                    super(nome);
+                    this.raca = 'bulldog'; 
+                }
+            }
+
+            cachorro = new Cachorro();
+
+            alert(cachorro.printNome());
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<html>
+    <body>
+        <script>
+
+            // this = isso
+
+            // this.nome = 'cássio'
+            // nome é uma key e 'Cássio' e o seu valor
+            
+            function Pessoa(){
+                this.nome = 'Cássio';
+            }
+
+            // New = novo
+            // new Pessoa() = {"nome": "Cássio} então var pessosa = {"nome": "Cássio}
+            var pessoa = new Pessoa();
+
+            // pessoa2 = {"nome": "Cássio}
+            var pessoa2 = new Pessoa();
+
+            // subistutiu o valor da key "nome" de "cássio" para 'Rayssa'
+            pessoa.nome = 'Rayssa';
+
+            alert(pessoa2.nome);
+
+
+            // 2 Parte
+            function Pessoa(){
+                this.nome = 'Cássio';
+                this.idade = 19;
+
+                // pode ser criado funções dentro de objetos
+                this.printNome = function(numero){
+                    alert(numero);
+                }
+
+                // Pode ser utilizado para acessar outro objeto
+                // neste caso acessando o objeto Animal 
+                this.returnAnimal = function(animal){
+                    return animal;
+                }
+            }
+            
+            function Animal(){
+                this.nome = "Cachorro";
+                this.raca = "Bulling";
+            }
+
+
+            var pessoa = new Pessoa();
+
+            var animal = new Animal();
+            
+            // Está acessando o objeto pessoa, key returnAnimal que 
+            // recebe como paramentro o objeto animal e retorna o mesmo 
+            // assim acessando a key: raca que se encontra nele
+            alert(pessoa.returnAnimal(animal).raca);
+
+
+        </script>
+    </body>
+</html>
