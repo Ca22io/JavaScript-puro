@@ -2,7 +2,7 @@
     <body>
         <style>
             .box h1 span{
-                font-size: 12px;
+                font-size: 13px;
                 cursor: pointer;
             }
             
@@ -56,21 +56,19 @@
         <script>
             var span = document.querySelectorAll('.box span');
 
-            var p = document.querySelector('p');
-
+            var p = document.querySelectorAll('.box p');
+    
             for(var i = 0; i < 4; i++){
                 span[i].addEventListener('click',function(){
-
-                    if (p.classList.contains('mostrar')){
-                        span.innerHTML = 'Ver mais!';
-                        p.classList.remove('mostrar');   
+                    if (p[i].classList.contains('mostrar')){
+                        span[i].innerHTML = 'Ver mais!';
+                        p[i].classList.remove('mostrar');   
                     }else{
-                        span.innerHTML = 'Ocutar';
-                        p.classList.add('mostrar');
-                    }
-                
-                })
-            }
+                        span[i].innerHTML = 'Ocutar';
+                        p[i].classList.add('mostrar');
+                    }                
+                });
+            };
                 
             
             
