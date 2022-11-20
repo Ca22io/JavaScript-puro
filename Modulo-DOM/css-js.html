@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <div id = 'box'></div>
+
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+
+    </body>
+    <script>
+        var el = document.getElementById('box');
+        el.style.height = 100;
+        el.style.width = 100;
+        el.style.backgroundColor = 'red'; 
+        el.style.borderStyle = 'solid';
+
+
+        var elementos = document.getElementsByClassName('box2');
+
+        // var els = elementos[0];
+        // els.style.height = 100;
+        // els.style.width = 100;
+        // els.style.backgroundColor = 'yellow'; 
+        // els.style.borderStyle = 'solid';
+
+        for(var i = 0; i < elementos.length; i++){
+            var els = elementos[i];
+
+            els.style.height = 100;
+            els.style.width = 100;
+            els.style.backgroundColor = 'yellow'; 
+            els.style.borderStyle = 'solid';
+        }
+
+
+
+    </script>
+</html>
