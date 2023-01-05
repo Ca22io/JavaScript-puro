@@ -55,11 +55,12 @@
 
         <script>
             var span = document.querySelectorAll('.box span');
-
-            var p = document.querySelectorAll('.box p');
     
-            for(var i = 0; i < 4; i++){
+            for(var i = 0; i < span.length; i++){
                 span[i].addEventListener('click',function(){
+                    
+                    var p = document.querySelectorAll('.box p');
+                    
                     if (p[i].classList.contains('mostrar')){
                         span[i].innerHTML = 'Ver mais!';
                         p[i].classList.remove('mostrar');   
